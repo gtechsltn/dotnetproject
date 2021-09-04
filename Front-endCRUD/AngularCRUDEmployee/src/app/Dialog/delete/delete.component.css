@@ -1,0 +1,5 @@
+.container,mat-dialog-actions,mat-card{
+    width: auto;
+    height: auto;
+    justify-content: center;
+  }

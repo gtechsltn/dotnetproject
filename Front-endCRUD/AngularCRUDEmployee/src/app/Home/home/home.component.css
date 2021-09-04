@@ -1,0 +1,74 @@
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+  .Container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 60%;
+    margin-right: 15%;
+  }
+
+
+.Container > div > button + mat-form-field {
+  flex: 25%;
+}
+
+    .Container > div > button {
+      margin-right: 20%;
+      margin-left: 0;
+      vertical-align: middle !important;
+    }
+
+.mat-form-field {
+  font-size: 20px;
+
+}
+
+.content {
+  padding: 16px;
+  /*margin:20px;
+*/
+}
+
+  .content > mat-card {
+    margin-bottom: 16px;
+    /* width:max-content;*/
+  }
+
+mat-card-content > div > p > mat-icon {
+  vertical-align: middle !important;
+}
+
+
+mat-card-content > div {
+  margin-left: 5% !important;
+}
+
+mat-card-actions {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+mat-card:hover {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+  transform: translate3D(0,-1px,0) scale(1.03);
+}
+mat-card {
+/*  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+*/  transition: all .5s ease; /* back to normal */
+}
+
+ mat-card:hover {
+    /*box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);*/
+    transition: all .4s ease; /* zoom in */
+  }
+  mat-divider{
+    margin-top:-2%;
+  }

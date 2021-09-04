@@ -1,0 +1,13 @@
+.container{
+    width: 400px;
+    justify-content: center;
+    text-align: center;
+  }
+  mat-form-field,mat-dialog-actions{
+    width: 100%;
+    justify-content: center;
+  }
+  mat-form-field{
+    font-size: 15px;
+  }
+  

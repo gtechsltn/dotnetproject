@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CRUDEmployee",
+    "\\CRUDEmployee\\Controllers",
+    "\\CRUDEmployee\\CRUDEmployee",
+    "\\CRUDEmployee\\Model",
+    "\\CRUDEmployee\\obj"
+  ],
+  "SelectedNode": "\\CRUDEmployee\\Model\\Employee.cs",
+  "PreviewInSolutionExplorer": false
+}

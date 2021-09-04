@@ -1,0 +1,47 @@
+<div class="container">
+  <h4 mat-dialog-title>Add new employee</h4>
+
+  <form [formGroup]="NewEmployee" (ngSubmit)="AddNewEmployee(NewEmployee)">
+
+        <mat-form-field appearance="standard">
+          <mat-label>First Name</mat-label>
+          <input matInput name="firstName" class="form-control" formControlName="firstName" autocomplete="off" >
+        </mat-form-field>
+    
+        <mat-form-field appearance="standard">
+          <mat-label>Last Name</mat-label>
+          <input matInput name="lastName" class="form-control" formControlName="lastName" autocomplete="off" >
+        </mat-form-field>
+     
+        <mat-form-field appearance="standard">
+          <mat-label>Position</mat-label>
+          <input matInput name="position" class="form-control" formControlName="position" autocomplete="off" >
+        </mat-form-field>
+     
+        <mat-form-field appearance="standard">
+          <mat-label>Email Address</mat-label>
+          <input matInput name="emialAddress"  class="form-control" formControlName="emialAddress" autocomplete="off" >
+        </mat-form-field>
+      
+       
+        <mat-form-field appearance="standard">
+          <mat-label>Phone Number</mat-label>
+          <input matInput name="phoneNumber" class="form-control" formControlName="phoneNumber">
+        </mat-form-field>
+      
+        <mat-form-field appearance="standard">
+          <mat-label>State</mat-label>
+          <input matInput name="state" class="form-control" formControlName="state">
+        </mat-form-field>
+   
+        <mat-form-field appearance="standard">
+          <mat-label>City</mat-label>
+          <input matInput name="city" class="form-control" formControlName="city">
+        </mat-form-field>
+    
+        <mat-dialog-actions>
+          <button mat-button color="primary" type="submit" [disabled]="!NewEmployee.valid">SUBMIT</button>
+          <button mat-button mat-dialog-close>CANCEL</button>
+        </mat-dialog-actions>
+  </form>
+</div>

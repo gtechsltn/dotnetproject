@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\Dialog",
+    "\\src\\app\\Dialog\\add",
+    "\\src\\app\\Dialog\\delete",
+    "\\src\\app\\Dialog\\edit",
+    "\\src\\app\\Home",
+    "\\src\\app\\Home\\view",
+    "\\src\\app\\Model",
+    "\\src\\app\\Services"
+  ],
+  "SelectedNode": "\\src\\app\\Home\\home\\home.component.html",
+  "PreviewInSolutionExplorer": false
+}
