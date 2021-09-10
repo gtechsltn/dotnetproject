@@ -103,11 +103,11 @@ namespace CRUDEmployee.Services
                     parameters.Add("City",employee.City);
                     var NewUpdatedemployee = @"SELECT *  FROM [dbo].[Employee] where EmployeeID = @EmployeeID";
 
-                    Employee UpdateEmployee = await connection.ExecuteScalarAsync<Employee>(sqlcommand, parameters);
-                    Employee NewlyUpdatedEmployee = await connection.QueryFirstAsync<Employee>(NewUpdatedemployee, new { EmployeeID = @EmployeeID });
+                    return  await connection.ExecuteScalarAsync<Employee>(sqlcommand, parameters);
+            /*        Employee NewlyUpdatedEmployee = await connection.QueryFirstAsync<Employee>(NewUpdatedemployee, new { EmployeeID = @EmployeeID });
 
 
-                    return NewlyUpdatedEmployee;
+                    return NewlyUpdatedEmployee;*/
                 }
             }
 

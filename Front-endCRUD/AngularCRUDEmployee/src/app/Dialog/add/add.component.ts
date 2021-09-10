@@ -39,7 +39,6 @@ export class AddComponent implements OnInit {
       
 
     })
-   // console.log(this.NewEmployee.value);
   }
   AddNewEmployee(FormData:any){
     this.ServicesService.AddNewEmployee(FormData.value).subscribe(
@@ -55,13 +54,13 @@ export class AddComponent implements OnInit {
     });
     console.log(this.NewEmployee.value);
    this.dialog.closeAll()
-   refresh()
+   this.refresh()
   }
-  
+   refresh() {
+    window.location.reload()
+  }
 }
 
 
 
-function refresh() {
-  window.location.reload()
-}
+

@@ -10,16 +10,17 @@
     </button>
     <mat-form-field appearance="standard">
       <mat-label>Search</mat-label>
-      <input matInput placeholder="Search by employee" #input (keyup)="applyFilter($event)" placeholder="Filter">
-
-
+      <input matInput placeholder="Search for an employee" (keyup)="applyFilter($event)" #input>
     </mat-form-field>
-
   </div>
 </div>
+<!-- <div class="Result" style="text-align: center;" *ngIf="input.value">
+  <p>Not result for {{input.value}}</p>
+</div> -->
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of Employees">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let employee of
+    obs | async">
       <mat-card class="mat-elevation-z4">
         <mat-card-header>
           <mat-card-title>{{employee.firstName}} {{employee.lastName}}</mat-card-title>
@@ -30,7 +31,8 @@
           <div>
             <p><mat-icon> email</mat-icon>{{employee.emialAddress}}</p>
             <p> <mat-icon> phone</mat-icon>{{employee.phoneNumber}}</p>
-            <p><mat-icon> location_on</mat-icon>{{employee.state}}, {{employee.city}}</p>
+            <p><mat-icon> location_on</mat-icon>{{employee.state}},
+              {{employee.city}}</p>
 
           </div>
 
@@ -38,12 +40,18 @@
         <mat-divider></mat-divider>
         <mat-card-actions>
 
-          <button mat-button style="color:blue" (click)="ViewEmployee(employee)"><mat-icon>view_stream</mat-icon></button>
-          <button mat-button><mat-icon style="color:dodgerblue" (click)="EditEmployee(employee)">edit</mat-icon></button>
-          <button mat-button><mat-icon style="color:red" (click)="DeleteEmployee(employee)">delete</mat-icon></button>
-
+          <button mat-button style="color:blue"
+            (click)="ViewEmployee(employee)"><mat-icon>view_stream</mat-icon></button>
+          <button mat-button><mat-icon style="color:dodgerblue"
+              (click)="EditEmployee(employee)">edit</mat-icon></button>
+          <button mat-button><mat-icon style="color:red"
+              (click)="DeleteEmployee(employee)">delete</mat-icon></button>
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
+
 </div>
+<mat-paginator [length]="resultsLength" [pageSize]="4" [showFirstLastButtons]="true" [pageSizeOptions]="[4,8,12,16]">
+</mat-paginator>
+
