@@ -1,32 +1,33 @@
 <div class="container">
-    <mat-card-title>Are sure you want to delete <br>the following employee {{Employee.employeeID}} ?</mat-card-title>
+  <mat-card-title>Are sure you want to delete <br>the following employee
+    {{Employee.employeeID}} ?</mat-card-title>
+  <mat-divider></mat-divider>
+
+  <mat-dialog-content>
+
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>{{Employee.firstName}} {{Employee.lastName}}</mat-card-title>
+        <mat-card-subtitle>{{Employee.position}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div>
+          <p><mat-icon> email</mat-icon>{{Employee.emialAddress}}</p>
+          <p> <mat-icon> phone</mat-icon>{{Employee.phoneNumber}}</p>
+          <p><mat-icon> location_on</mat-icon>{{Employee.state}},
+            {{Employee.city}}</p>
+
+        </div>
+
+      </mat-card-content>
+    </mat-card>
     <mat-divider></mat-divider>
 
-    <mat-dialog-content>
-       
-        <mat-card class="mat-elevation-z4">
-            <mat-card-header>
-              <mat-card-title>{{Employee.firstName}} {{Employee.lastName}}</mat-card-title>
-              <mat-card-subtitle>{{Employee.position}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-              <div>
-                <p><mat-icon> email</mat-icon>{{Employee.emialAddress}}</p>
-                <p> <mat-icon> phone</mat-icon>{{Employee.phoneNumber}}</p>
-                <p><mat-icon> location_on</mat-icon>{{Employee.state}}, {{Employee.city}}</p>
-    
-              </div>
-    
-            </mat-card-content>
-          </mat-card>
-          <mat-divider></mat-divider>
-          
-        </mat-dialog-content>
-        <mat-dialog-actions>
-            <button mat-button color="primary" type="submit" (click)="DeleteEmployee(Employee)">DELETE</button>
-            <button mat-button mat-dialog-close>CANCEL</button>
-          </mat-dialog-actions>
-  </div>
-
-  
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button color="primary" type="submit"
+      (click)="DeleteEmployee(Employee)">DELETE</button>
+    <button mat-button mat-dialog-close>CANCEL</button>
+  </mat-dialog-actions>
+</div>

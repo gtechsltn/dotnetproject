@@ -21,6 +21,12 @@ import { ServicesService } from './Services/services.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AddComponent } from './Dialog/add/add.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
+
 
 
 
@@ -51,6 +57,9 @@ import { AddComponent } from './Dialog/add/add.component';
     ReactiveFormsModule,
     FormsModule,
     MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSnackBarModule
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent],

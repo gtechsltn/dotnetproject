@@ -11,23 +11,23 @@ import { ServicesService } from 'src/app/Services/services.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  UpdateEmployee = new FormGroup({
+ 
+  employee = new Model;
+  UpdateEmployee:any;
+  NewEmployee: FormGroup = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     position: new FormControl(''),
-    emialAddress: new FormControl(''),
+    emialAddress:new FormControl(''),
+    phoneNumber: new FormControl(''),
     state: new FormControl(''),
-    city: new FormControl(''),    
-  });
-  employee = new Model;
-  
+    city: new FormControl('')});
   constructor(@Inject(MAT_DIALOG_DATA) public Employee:Model,private fb:FormBuilder,private ServicesService: ServicesService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
     
     this.ServicesService.GetEmployeeById(this.Employee.employeeID).subscribe(result=>{
 
-      // this.Employee;
       this.employee = result;
       this.employee.employeeID = result.employeeID;
      
@@ -45,24 +45,22 @@ export class EditComponent implements OnInit {
       city: ['',Validators.required]
   }
   )
-  this.UpdateEmployee.setValue(
-    {
-      firstName:[this.Employee.firstName],
-      lastName:[this.Employee.lastName],
-      position:[this.Employee.position],
-      emialAddress:[this.Employee.emialAddress],
-      phoneNumber:[this.Employee.phoneNumber],
-      state:[this.Employee.state],
-      city: [this.Employee.city],
-    }
-    )
-
-  //this.UpdateEmployee.patchValue(this.UpdateEmployee)
+  this.UpdateEmployee.patchValue(this.Employee)
 
 }
 EditEmployee(FormData:any){
 
-  console.log(this.employee)
-  this.ServicesService.EditmployeeByID(this.employee.employeeID,FormData).subscribe()
+  this.ServicesService.EditmployeeByID(this.employee.employeeID,FormData.value).subscribe(UpdatedEmployee=>{
+
+    
+   
+    console.log(UpdatedEmployee);
+
+  })
+  this.dialog.closeAll();
+ this.refresh();
+}
+refresh() {
+  window.location.reload()
 }
 }

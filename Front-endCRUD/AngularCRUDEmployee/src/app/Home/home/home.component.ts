@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { DeleteComponent } from 'src/app/Dialog/delete/delete.component';
 import { EditComponent } from 'src/app/Dialog/edit/edit.component';
 import { Model } from 'src/app/Model/Model';
@@ -15,20 +17,27 @@ import { ViewComponent } from '../view/view.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  Employees: any = '';
-  dataSource = new MatTableDataSource(this.Employees)
- // Employees: any = [{ "employeeID": 17, "firstName": "Sidi ", "lastName": "MED", "position": "C# developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "554-545-454", "state": " KY", "city": "Lousiville" }, { "employeeID": 18, "firstName": "Sidi ", "lastName": "MED", "position": "C# developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "554-545-454", "state": " KY", "city": "NEW york" }, { "employeeID": 20, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 21, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 22, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 23, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 24, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 25, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 26, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 27, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 28, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 29, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 30, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 31, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 32, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 33, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 34, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 35, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 36, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }, { "employeeID": 37, "firstName": "Elhacen", "lastName": "Elmoustapha", "position": "C#/java/c/developer", "emialAddress": "elhacen@gmail.com", "phoneNumber": "11111111", "state": " KY", "city": "Lousiville" }];
-  DataSource = new MatTableDataSource(this.Employees);
+  employees :any[]=[] ;
+  DataSource : MatTableDataSource<any> = new MatTableDataSource<any>(this.employees);
+  resultsLength:number= 0;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  obs:Observable<any> = new Observable<any>();
+
+
 
   constructor(private ServicesService: ServicesService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.GetAllEmployees();
+
   }
   GetAllEmployees() {
-    this.ServicesService.GetAllEmployees().subscribe((Employees) => {
+    this.ServicesService.GetAllEmployees().subscribe(Employees => {
 
-      this.Employees = Employees;
+      this.DataSource.data = Employees;
+      this.obs = this.DataSource.connect();
+      this.DataSource.paginator = this.paginator;
+      this.resultsLength = this.employees.length;
 
 
     },
@@ -42,62 +51,64 @@ export class HomeComponent implements OnInit {
     this.dialog.open(AddComponent);
 
   }
- 
-  DeleteEmployee(Employee:Model) {
-    this.dialog.open(DeleteComponent,{
+
+  DeleteEmployee(Employee: Model) {
+    this.dialog.open(DeleteComponent, {
       data:
       {
-        employeeID:Employee.employeeID,
-        firstName:Employee.firstName,
-        lastName:Employee.lastName,
-        position:Employee.position,
-        emialAddress:Employee.emialAddress,
-        phoneNumber:Employee.phoneNumber,
-        state:Employee.state,
-        city:Employee.city
+        employeeID: Employee.employeeID,
+        firstName: Employee.firstName,
+        lastName: Employee.lastName,
+        position: Employee.position,
+        emialAddress: Employee.emialAddress,
+        phoneNumber: Employee.phoneNumber,
+        state: Employee.state,
+        city: Employee.city
 
       }
     });
-    console.log(Employee.employeeID+" From parent component")
   }
-  EditEmployee(Employee:Model) {
-    this.dialog.open(EditComponent,{
+  EditEmployee(Employee: Model) {
+    this.dialog.open(EditComponent, {
       data:
       {
-        employeeID:Employee.employeeID,
-        firstName:Employee.firstName,
-        lastName:Employee.lastName,
-        position:Employee.position,
-        emialAddress:Employee.emialAddress,
-        phoneNumber:Employee.phoneNumber,
-        state:Employee.state,
-        city:Employee.city
+        employeeID: Employee.employeeID,
+        firstName: Employee.firstName,
+        lastName: Employee.lastName,
+        position: Employee.position,
+        emialAddress: Employee.emialAddress,
+        phoneNumber: Employee.phoneNumber,
+        state: Employee.state,
+        city: Employee.city
 
       }
     });
-    console.log(Employee.employeeID+" From parent component")
+    console.log(Employee.employeeID + " From parent component")
   }
-  ViewEmployee(Employee:any) {
-    this.dialog.open(ViewComponent,{
+  ViewEmployee(Employee: any) {
+    this.dialog.open(ViewComponent, {
       data:
       {
-        employeeID:Employee.employeeID,
-        firstName:Employee.firstName,
-        lastName:Employee.lastName,
-        position:Employee.position,
-        emialAddress:Employee.emialAddress,
-        phoneNumber:Employee.phoneNumber,
-        state:Employee.state,
-        city:Employee.city
+        employeeID: Employee.employeeID,
+        firstName: Employee.firstName,
+        lastName: Employee.lastName,
+        position: Employee.position,
+        emialAddress: Employee.emialAddress,
+        phoneNumber: Employee.phoneNumber,
+        state: Employee.state,
+        city: Employee.city
 
       }
     });
-    console.log(Employee.employeeID+" From parent component")
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    console.log(filterValue);
-  }
+    this.DataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.DataSource.paginator) {
+      this.DataSource.paginator.firstPage();
+    } 
+   }
+ 
 
 }
