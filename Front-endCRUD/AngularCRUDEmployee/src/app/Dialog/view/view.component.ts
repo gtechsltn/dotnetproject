@@ -1,4 +1,4 @@
-import { Component, OnInit ,Inject} from '@angular/core';
+import { Component, OnInit ,Inject, ChangeDetectorRef} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Model } from 'src/app/Model/Model';
@@ -10,11 +10,12 @@ import { Model } from 'src/app/Model/Model';
 })
 export class ViewComponent implements OnInit {
  
-  constructor(@Inject(MAT_DIALOG_DATA) public Employee:Model,private fb:FormBuilder,public dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public Employee:Model,private fb:FormBuilder,public dialog: MatDialog,private ref: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.Employee.firstName);
-    console.log(this.Employee.lastName);
+  
+
 
   }
 

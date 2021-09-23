@@ -13,3 +13,12 @@ mat-dialog-actions {
 mat-form-field {
   font-size: 15px;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: auto;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}

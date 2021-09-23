@@ -12,7 +12,6 @@ import { EditComponent } from './Dialog/edit/edit.component';
 import { DeleteComponent } from './Dialog/delete/delete.component';
 import { HomeComponent } from './Home/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewComponent } from './Home/view/view.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -24,10 +23,13 @@ import { AddComponent } from './Dialog/add/add.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { Routes } from '@angular/router';
+import { ViewComponent } from './Dialog/view/view.component';
 
 
 
 
+const routes: Routes = [];
 
 
 
@@ -59,11 +61,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent],
-  entryComponents: [EditComponent,DeleteComponent,ViewComponent]
+  entryComponents: [AddComponent,EditComponent,DeleteComponent,ViewComponent]
 
 })
 export class AppModule { }
