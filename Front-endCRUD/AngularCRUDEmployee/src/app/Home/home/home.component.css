@@ -1,52 +1,38 @@
 .Container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.AddButton,
+.InfoButton,
+.SearchField {
+  flex: 33%;
+  text-align: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.SearchField>mat-form-field {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.Container>div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 60%;
-  margin-right: 15%;
-}
-
-
-.Container>div>button+mat-form-field {
-  flex: 25%;
-}
-
-.Container>div>button {
-  margin-right: 20%;
-  margin-left: 0;
-}
-
-.mat-form-field {
-  max-height:75px;
   font-size: 20px;
 }
-::ng-deep .search {
- background-color: blue;
- color: red;
- vertical-align: middle;
- margin-top: -2;
 
+
+.Container>mat-form-field>input {
+  width: 50%;
 }
+
+
+
 .content {
   padding: 16px;
 }
 
 .content>mat-card {
-  margin-bottom: 16px;
+  margin-bottom: auto;
 
-}
-
-mat-card-content>div>p>mat-icon {
-  vertical-align: middle !important;
 }
 
 
@@ -73,11 +59,28 @@ mat-card {
 }
 
 mat-card:hover {
-  /*box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);*/
   transition: all .4s ease;
-  /* zoom in */
 }
 
 mat-divider {
   margin-top: -2%;
+}
+
+.mat-card {
+  max-height: max-content;
+}
+
+
+
+@media screen and (max-width: 890px) {
+  .SearchField>mat-form-field {
+    width: auto;
+    flex: 35%;
+    font-size: 20px;
+  }
+
+  .SearchField>mat-form-field>input,
+  input::placeholder {
+    font-size: 16.5px;
+  }
 }
