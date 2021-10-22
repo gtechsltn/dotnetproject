@@ -1,0 +1,32 @@
+2021-10-01 21:49:23.8763 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 21:49:24.2675 | Info  | Hosting environment: Development 
+2021-10-01 21:49:24.2947 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 21:52:23.0334 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 21:52:23.7965 | Info  | Hosting environment: Development 
+2021-10-01 21:52:23.8089 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:06:23.1186 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:06:23.4734 | Info  | Hosting environment: Development 
+2021-10-01 22:06:23.4833 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:37:02.9082 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:37:03.1823 | Info  | Hosting environment: Development 
+2021-10-01 22:37:03.1942 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:37:45.2048 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:37:45.5224 | Info  | Hosting environment: Development 
+2021-10-01 22:37:45.5382 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:40:34.9584 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:40:35.2915 | Info  | Hosting environment: Development 
+2021-10-01 22:40:35.3028 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:43:55.4430 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:43:55.8906 | Info  | Hosting environment: Development 
+2021-10-01 22:43:55.8983 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 22:55:05.0164 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 22:55:05.4312 | Info  | Hosting environment: Development 
+2021-10-01 22:55:05.4500 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 23:10:05.3220 | Debug | From main 
+2021-10-01 23:10:06.5152 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 23:10:06.5248 | Info  | Hosting environment: Development 
+2021-10-01 23:10:06.5248 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 
+2021-10-01 23:13:22.1157 | Debug | From main 
+2021-10-01 23:13:23.3040 | Info  | Application started. Press Ctrl+C to shut down. 
+2021-10-01 23:13:23.3205 | Info  | Hosting environment: Development 
+2021-10-01 23:13:23.3346 | Info  | Content root path: C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee 

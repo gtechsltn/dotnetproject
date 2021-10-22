@@ -3,6 +3,7 @@ import { stringify } from '@angular/compiler/src/util';
 import { Injectable, } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Model } from '../Model/Model';
 
 @Injectable({
@@ -10,7 +11,7 @@ import { Model } from '../Model/Model';
 })
 export class ServicesService {
 
-  URL = 'https://localhost:44301/api/employee';
+  URL:string= environment.URL;
   EmployeeID: number = 0;
   constructor(private http: HttpClient) {
 

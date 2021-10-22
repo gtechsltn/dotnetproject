@@ -12,6 +12,7 @@ import { AddComponent } from '../../Dialog/add/add.component';
 import { VERSION } from '@angular/core';
 import { ViewComponent } from 'src/app/Dialog/view/view.component';
 import { switchMap } from 'rxjs-compat/operator/switchMap';
+import { InfoComponent } from 'src/app/Dialog/info/info.component';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,7 @@ import { switchMap } from 'rxjs-compat/operator/switchMap';
 export class HomeComponent implements OnInit {
   //employees: any[] = [];
   DataSource: MatTableDataSource<any> = new MatTableDataSource<any>(
-   
+
   );
   resultsLength: number = 0;
   RefreshEmployees = new BehaviorSubject<boolean>(true)
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   angularVersion = VERSION.full;
   employees: Observable<any> = new Observable<any>();
-  
+
 
   constructor(
     private ServicesService: ServicesService,
@@ -61,6 +62,9 @@ export class HomeComponent implements OnInit {
     this.dialog.open(AddComponent);
     // this.ref.detectChanges();
 
+  }
+  GetInfo() {
+    this.dialog.open(InfoComponent);
   }
 
   DeleteEmployee(Employee: Model) {

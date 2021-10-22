@@ -25,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { Routes } from '@angular/router';
 import { ViewComponent } from './Dialog/view/view.component';
+import { InfoComponent } from './Dialog/info/info.component';
 
 
 
@@ -40,7 +41,8 @@ const routes: Routes = [];
     DeleteComponent,
     HomeComponent,
     ViewComponent,
-    AddComponent
+    AddComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

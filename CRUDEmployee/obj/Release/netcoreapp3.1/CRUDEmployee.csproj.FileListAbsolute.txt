@@ -26,3 +26,6 @@ C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmploye
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\CRUDEmployee.dll
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\CRUDEmployee.pdb
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\CRUDEmployee.genruntimeconfig.cache
+C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\bin\Release\netcoreapp3.1\NLog.dll
+C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\bin\Release\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\bin\Release\netcoreapp3.1\NLog.Web.AspNetCore.dll

@@ -4,8 +4,7 @@
   text-align: center;
 }
 
-mat-form-field,
-mat-dialog-actions {
+mat-form-field{
   width: 100%;
   justify-content: center;
 }

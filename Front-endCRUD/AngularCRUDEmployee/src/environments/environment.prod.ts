@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  URL: 'http://aspdotnet.crud.com:8080/api/employee'
+
 };
