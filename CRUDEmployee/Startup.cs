@@ -40,9 +40,12 @@ namespace CRUDEmployee
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors(options =>
-                        options.WithOrigins("http://localhost:4200")
+                        options.WithOrigins("http://localhost:4200", "http://www.employeecrud.com:8084", "https://angularcrud.pages.dev/")
                         .AllowAnyMethod()
-                        .AllowAnyHeader());
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
