@@ -6,9 +6,6 @@ C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmploye
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\CRUDEmployee.runtimeconfig.json
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\CRUDEmployee.pdb
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\Dapper.dll
-C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.dll
-C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.Extensions.Logging.dll
-C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\NLog.Web.AspNetCore.dll
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\System.Data.SqlClient.dll
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-arm64\native\sni.dll
 C:\Users\cheik\OneDrive\Desktop\emplyersProject\EmployeeeAsp.netCore\CRUDEmployee\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x64\native\sni.dll
