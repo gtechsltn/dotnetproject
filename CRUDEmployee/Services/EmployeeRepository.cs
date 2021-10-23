@@ -40,7 +40,7 @@ namespace CRUDEmployee.Services
         }
         public async Task<ActionResult<Employee>> GetEmployeeByID(int EmployeeID)
         {
-            string sqlcommand = @"SELECT *  FROM [dbo].[Employee] where EmployeeID = @EmployeeID";
+            string sqlcommand = @"[dbo].[GetEmployeeById] @EmployeeID";
             try
             {
 
@@ -67,7 +67,7 @@ namespace CRUDEmployee.Services
                 {
                     connection.Open();
 
-                    var sqlcommand = @"Insert into Employee(FirstName, LastName, Position, EmialAddress, PhoneNumber,State,City) OUTPUT INSERTED.* VALUES(@FirstName, @LastName, @Position, @EmialAddress, @PhoneNumber,@State,@City)";
+                    var sqlcommand = @"[dbo].[InsertNewEmployee] @FirstName, @LastName, @Position, @EmialAddress, @PhoneNumber,@State,@City";
 
                     Employee CreatedEmployee = await connection.QuerySingleAsync<Employee>(sqlcommand, employee);
 
@@ -91,7 +91,6 @@ namespace CRUDEmployee.Services
                 {
                     connection.Open();
 
-                    var sqlcommand = @"UPDATE [dbo].[Employee]  SET FirstName = @FirstName, LastName = @LastName, Position = @Position,EmialAddress=@EmialAddress,PhoneNumber=@PhoneNumber,State=@State, City=@City Where EmployeeID=@EmployeeID";
                     var parameters = new DynamicParameters();
                     parameters.Add("EmployeeID", EmployeeID);
                     parameters.Add("FirstName", employee.FirstName);
@@ -101,7 +100,9 @@ namespace CRUDEmployee.Services
                     parameters.Add("PhoneNumber", employee.PhoneNumber);
                     parameters.Add("State", employee.State);
                     parameters.Add("City", employee.City);
-                    var NewUpdatedemployee = @"SELECT *  FROM [dbo].[Employee] where EmployeeID = @EmployeeID";
+                    var sqlcommand = @"[dbo].[UpdateEmployeeById] @FirstName,@LastName,@Position,@EmialAddress,@PhoneNumber,@State,@City,@EmployeeID";
+
+                    var NewUpdatedemployee = @"[dbo].[GetEmployeeById] @EmployeeID";
 
                     return await connection.ExecuteScalarAsync<Employee>(sqlcommand, parameters);
 
@@ -116,7 +117,7 @@ namespace CRUDEmployee.Services
         public async Task<Employee> DeleteEmployee(int EmployeeId)
         {
 
-            string sqlcommand = @"DELETE  FROM [dbo].[Employee] where EmployeeID = @EmployeeId";
+            string sqlcommand = @"[dbo].[DeleteEmployeeById] @EmployeeId";
             try
             {
 
